@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body class="bg-gray-300">
+    <form class="todo-form p-5 bg-white flex rounded-md w-[500px] space-x-3 mx-auto mt-5">
+        <input class="todo-input border-[2px] border-slate-400 p-2 rounded-md w-[80%]" required type="text" placeholder="Typing...">
+        <button class="p-2 rounded-md bg-green-600 text-white w-[20%] hover:bg-green-400 duration-300">Submit</button>
+    </form>
+
+    <ul class="todo-list mx-auto w-[500px] mt-5 p-5 bg-white rounded-md space-y-5"></ul>
+    
+    <script src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
