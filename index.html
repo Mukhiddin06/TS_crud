@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
-    <style type="text/tailwindcss">
-        @layer utilities {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="./main.css">
+  <style type="text/tailwindcss">
+    @layer utilities {
           .content-auto {
             content-visibility: auto;
           }
         }
     </style>
 </head>
-<body class="bg-gray-300">
-    <form class="todo-form p-5 bg-white flex rounded-md w-[500px] space-x-3 mx-auto mt-5">
-        <input class="todo-input border-[2px] border-slate-400 p-2 rounded-md w-[80%]" required type="text" placeholder="Typing...">
-        <button class="p-2 rounded-md bg-green-600 text-white w-[20%] hover:bg-green-400 duration-300">Submit</button>
-    </form>
 
-    <ul class="todo-list mx-auto w-[500px] mt-5 p-5 bg-white rounded-md space-y-5"></ul>
-    
-    <script src="main.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
+<body class="bg-gray-300">
+  <form class="todo-form p-5 bg-white flex rounded-md w-[500px] space-x-3 mx-auto mt-5">
+    <input class="todo-input border-[2px] border-slate-400 p-2 rounded-md w-[80%]" required type="text"
+      placeholder="Typing...">
+    <button class="p-2 rounded-md bg-green-600 text-white w-[20%] hover:bg-green-400 duration-300">Submit</button>
+  </form>
+  <div class="circle-chart-container flex items-center gap-4 my-4">
+    <div class="circle-chart relative w-[200px] h-[200px] rounded-full">
+      <span class="percentage-text absolute inset-0 flex items-center justify-center font-bold text-xl"></span>
+    </div>
+  </div>
+  <div class="mx-auto w-[500px] mt-5 p-5 bg-white rounded-md space-x-3 flex items-center justify-between">
+    <button class="all-list-btn p-2 bg-green-400 rounded-lg text-white">All ( <span class="all-list">0</span> )</button>
+    <button class="complate-btn p-2 bg-green-400 rounded-lg text-white">Complated ( <span class="complated-list">0</span> )</button>
+    <button class="uncomplate-btn p-2 bg-green-400 rounded-lg text-white">Uncomplated ( <span class="uncomplated-list">0</span> )</button>
+  </div>
+
+  <ul class="todo-list mx-auto w-[500px] mt-5 p-5 bg-white rounded-md space-y-5"></ul>
+
+  <script src="main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
           }
         }
-    </script>
+      }
+    }
+  </script>
 </body>
+
 </html>

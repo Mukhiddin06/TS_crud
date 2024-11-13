@@ -1,0 +1,16 @@
+.circle-chart-container {
+    display: flex;
+    justify-content: center;
+}
+
+.circle-chart {
+    transition: all 1s linear;
+    background: conic-gradient(#4CAF50 0%, #F44336 0% 100%);
+    border-radius: 50%;
+}
+
+.percentage-text {
+    font-size: 1.5rem;
+    color: white;
+    transition: opacity 1s ease;
+}
